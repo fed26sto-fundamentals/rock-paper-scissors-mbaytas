@@ -1,9 +1,9 @@
-console.log("Let the games begin!");
-
+// GLOBAL CONSTANTS AND VARIABLES
 const choices = ["rock", "paper", "scissors"];
-
 let humanScore = 0;
 let computerScore = 0;
+
+// FUNCTIONS
 
 function getComputerChoice() {
   // Randomly return one of the choices
@@ -41,6 +41,10 @@ function playRound(humanChoice, computerChoice) {
   // Declare the score
   console.log("Human: " + humanScore + " | Computer: " + computerScore);
 }
+
+// RUN THE GAME
+
+console.log("Let the games begin!");
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
