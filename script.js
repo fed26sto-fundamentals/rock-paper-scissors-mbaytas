@@ -19,5 +19,30 @@ function getHumanChoice() {
   else return undefined;
 }
 
-console.log("Human choice: " + getHumanChoice());
-console.log("Computer choice: " + getComputerChoice());
+function playRound(humanChoice, computerChoice) {
+  console.log("Human choice: " + humanChoice);
+  console.log("Computer choice: " + computerChoice);
+
+  // Determine and declare the winner
+  if (humanChoice == computerChoice) {
+    console.log("Tie!");
+  } else if (
+    (humanChoice == "rock" && computerChoice == "scissors") ||
+    (humanChoice == "paper" && computerChoice == "rock") ||
+    (humanChoice == "scissors" && computerChoice == "paper")
+  ) {
+    console.log("Human wins!");
+    humanScore++;
+  } else {
+    console.log("Computer wins!");
+    computerScore++;
+  }
+
+  // Declare the score
+  console.log("Human: " + humanScore + " | Computer: " + computerScore);
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
